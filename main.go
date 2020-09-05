@@ -37,15 +37,16 @@ var (
 
 	kubeConfigFile string = filepath.Join(os.Getenv("HOME"), ".kube", "config")
 	namespace      string = os.Getenv("NAMESPACE")
-	maxDuration           = 1
+	// In cluster API calls should be quick
+	maxDuration           = 250
 	debugEnv       string = os.Getenv("DEBUG")
-	maxDurationEnv string = os.Getenv("MAX_DURATION_SECONDS")
+	maxDurationEnv string = os.Getenv("MAX_DURATION_MILLISECONDS")
 )
 
 func init() {
 
 	if maxDurationEnv != "" {
-		maxDuration, _ = strconv.Atoi(os.Getenv("MAX_DURATION_SECONDS"))
+		maxDuration, _ = strconv.Atoi(os.Getenv("MAX_DURATION_MILLISECONDS"))
 	}
 
 	if namespace == "" {
@@ -77,7 +78,7 @@ func main() {
 	}
 
 	// const apiCallLatencyThreshold = maxDuration * time.Second
-	apiCallLatencyThreshold, _ := time.ParseDuration(strconv.Itoa(maxDuration) + "s")
+	apiCallLatencyThreshold, _ := time.ParseDuration(strconv.Itoa(maxDuration) + "ms")
 
 	log.Debugln("Beginning check of namespace: " + namespace)
 	timeStart := time.Now()

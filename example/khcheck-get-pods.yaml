@@ -13,7 +13,7 @@ spec:
       env:
         - name: NAMESPACE
           value: "kuberhealthy"
-        - name: MAX_DURATION_SECONDS
-          value: "1"
+        - name: MAX_DURATION_MILLISECONDS
+          value: "250"
         - name: DEBUG
           value: "1"
