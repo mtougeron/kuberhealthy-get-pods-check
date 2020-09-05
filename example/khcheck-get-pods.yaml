@@ -1,0 +1,19 @@
+apiVersion: comcast.github.io/v1
+kind: KuberhealthyCheck
+metadata:
+  name: get-pods
+spec:
+  runInterval: 5m
+  timeout: 1m
+  podSpec:
+    containers:
+    - name: main
+      image: ghcr.io/mtougeron/khcheck-get-pods:latest
+      imagePullPolicy: IfNotPresent
+      env:
+        - name: NAMESPACE
+          value: "kuberhealthy"
+        - name: MAX_DURATION_SECONDS
+          value: "1"
+        - name: DEBUG
+          value: "1"
