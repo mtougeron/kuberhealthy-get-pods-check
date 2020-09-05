@@ -4,7 +4,12 @@
 
 The `Kuberhealthy Get Pods Check` checks if the API servers returns a list of pods under a specified time-limit.
 
-#### Kuberhealthy AWS IAM Role Check Kube Spec Example
+## Thanks Comcast!
+
+A big shout-out and thank you goes to Comcast for writing [Kuberhealthy](https://github.com/Comcast/kuberhealthy)
+
+## Kuberhealthy AWS IAM Role Check Kube Spec Example
+
 ```yaml
 apiVersion: comcast.github.io/v1
 kind: KuberhealthyCheck
@@ -28,7 +33,7 @@ spec:
 ```
 where `NAMESPACE` is the Kubernetes namespace to get the pods from.
 
-#### Installation
+### Installation
 
 >Make sure you are using the latest release of Kuberhealthy 2.2.0.
 
@@ -37,7 +42,7 @@ Run `kubectl apply` against [example spec file](example/khcheck-get-pods.yaml)
 ```bash
 kubectl apply -f khcheck-get-pods.yaml -n kuberhealthy
 ```
-##### Container Image
+#### Container Image
 
 Image is available [Github Container Registry](https://github.com/users/mtougeron/packages/container/khcheck-get-pods/)
 
