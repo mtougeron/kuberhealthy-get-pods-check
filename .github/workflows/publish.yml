@@ -73,10 +73,3 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.docker_meta.outputs.tags }}
           labels: ${{ steps.docker_meta.outputs.labels }}
-      -
-        name: Update DockerHub description
-        uses: peter-evans/dockerhub-description@v2
-        with:
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_TOKEN }}
-          repository: ${{ secrets.DOCKER_HUB_USERNAME }}/khcheck-get-pods
