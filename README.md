@@ -35,7 +35,7 @@ where `NAMESPACE` is the Kubernetes namespace to get the pods from.
 
 ### Installation
 
-> Make sure you are using the latest release of Kuberhealthy 2.x
+>Make sure you are using the latest release of Kuberhealthy 2.x
 
 Run `kubectl apply` against [example spec file](example/khcheck-get-pods.yaml)
 
