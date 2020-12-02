@@ -35,16 +35,17 @@ where `NAMESPACE` is the Kubernetes namespace to get the pods from.
 
 ### Installation
 
->Make sure you are using the latest release of Kuberhealthy 2.2.0.
+>Make sure you are using the latest release of Kuberhealthy 2.x
 
 Run `kubectl apply` against [example spec file](example/khcheck-get-pods.yaml)
 
 ```bash
 kubectl apply -f khcheck-get-pods.yaml -n kuberhealthy
 ```
+
 #### Container Image
 
-Image is available [Github Container Registry](https://github.com/users/mtougeron/packages/container/khcheck-get-pods/)
+Image is available [Github Container Registry](https://github.com/users/mtougeron/packages/container/khcheck-get-pods/) and [DockerHub](https://hub.docker.com/repository/docker/mtougeron/khcheck-get-pods)
 
 ### Licensing
 
