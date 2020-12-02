@@ -1,6 +1,6 @@
 ## Kuberhealthy Get Pods Check
 
-![Go](https://github.com/mtougeron/kuberhealthy-get-pods-check/workflows/Go/badge.svg) ![Gosec](https://github.com/mtougeron/kuberhealthy-get-pods-check/workflows/Gosec/badge.svg) [![GitHub tag](https://img.shields.io/github/tag/mtougeron/kuberhealthy-get-pods-check.svg)](https://github.com/mtougeron/kuberhealthy-get-pods-check/tags/)
+![Go](https://github.com/mtougeron/kuberhealthy-get-pods-check/workflows/Go/badge.svg) ![Gosec](https://github.com/mtougeron/kuberhealthy-get-pods-check/workflows/Gosec/badge.svg) ![ContainerScan](https://github.com/mtougeron/kuberhealthy-get-pods-check/workflows/ContainerScan/badge.svg) [![GitHub tag](https://img.shields.io/github/tag/mtougeron/kuberhealthy-get-pods-check.svg)](https://github.com/mtougeron/kuberhealthy-get-pods-check/tags/)
 
 The `Kuberhealthy Get Pods Check` checks if the API servers returns a list of pods under a specified time-limit.
 
