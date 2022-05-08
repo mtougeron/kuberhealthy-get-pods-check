@@ -18,6 +18,7 @@
 package main
 
 import (
+	"context"
 	"os"
 	"path/filepath"
 	"strconv"
@@ -82,7 +83,7 @@ func main() {
 
 	log.Debugln("Beginning check of namespace: " + namespace)
 	timeStart := time.Now()
-	pods, err := client.CoreV1().Pods(namespace).List(metav1.ListOptions{})
+	pods, err := client.CoreV1().Pods(namespace).List(context.TODO(), metav1.ListOptions{})
 	apiResponseTime := time.Since(timeStart)
 	if err != nil {
 		log.Errorln("Error getting pods")
